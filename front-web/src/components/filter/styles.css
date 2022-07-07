@@ -1,0 +1,25 @@
+.filter-container{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 130px;
+  border: 1px solid orange;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.filter-input{
+  height: 50px;
+  width: 270px;
+  background-color: var(--primary-color);
+  color: var(--grey-light-color);
+  font-size: 16px;
+  border: 1px solid var(--grey-light-color);
+  border-radius: 4px;
+  padding: 16px 132px 14px 12px;
+}
+
+.filter-input::placeholder {
+  color: var(--grey-light-color);
+  font-size: 16px;
+}
