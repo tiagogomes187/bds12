@@ -1,7 +1,6 @@
 .sales-by-store-container{
-  padding-top: 40px;
-  padding-left: 15px;
-  padding-bottom: 60px;
+  padding: 40px 15px 60px;
+  margin-bottom: 30px;
 }
 
 .sales-by-store-quantity{
@@ -14,4 +13,16 @@
   font-size: 18px;
   font-weight: 400;
   color: var(--grey-light-color);
+}
+
+
+@media (min-width: 992px) {
+  .sales-by-store-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 63px;
+    padding-left: 40px;
+  }
+
 }
