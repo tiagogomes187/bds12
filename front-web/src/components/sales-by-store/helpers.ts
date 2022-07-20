@@ -1,4 +1,5 @@
 import { ApexOptions } from 'apexcharts';
+import { SalesByGender } from '../../types';
 
 export const buildPieChartConfig = (labels: string[] = [], name: string) => {
   return {
@@ -65,4 +66,17 @@ export const buildPieChartConfig = (labels: string[] = [], name: string) => {
       height: '400px'
     }
   } as ApexOptions;
+};
+
+export const buildChartSeries = (salesByGender: SalesByGender[] = []) => {
+  return salesByGender.map(({ gender, sum }) => ({
+    x: gender,
+    y: sum
+  }));
+};
+
+export const sumSalesByGender = (SalesByGender: SalesByGender[] = []) => {
+  return SalesByGender.reduce((previousValue, currentValue) => {
+    return previousValue + currentValue.sum;
+  }, 0);
 };

@@ -3,19 +3,18 @@ import { buildPieChartConfig } from './helpers';
 import './styles.css';
 
 type Props = {
-  labels: string[];
+  labels?: string[];
   name: string;
-  series: number[];
+  series?: number[];
 };
-
-function PieChartCard({ labels, name, series }: Props) {
+function PieChartCard({ labels = [], name, series = [] }: Props) {
   return (
     <div className="pie-chart-card apexcharts-slices">
       <ReactApexChart
         options={buildPieChartConfig(labels, name)}
         type="donut"
-        width="400"
-        height="400"
+        width={400}
+        height={400}
         series={series}
       />
     </div>
